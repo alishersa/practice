@@ -1,2 +1,2 @@
-namespace/s-35 created
+"namespace/s-35 created"
 kubectl create ns s-35
