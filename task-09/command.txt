@@ -1,0 +1,1 @@
+kubectl create deployment flask-app --image alishersa1233/flask-app:v1 --replicas 1 -n s-35

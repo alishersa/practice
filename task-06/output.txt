@@ -1,0 +1,2 @@
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES       SELECTOR
+hr-app   3/3     3            3           4m18s   nginx        nginx:1.18   app=hr-app

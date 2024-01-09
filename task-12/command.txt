@@ -1,0 +1,1 @@
+kubectl expose deploy flask-app --name flask-app-12 --port 8080 --target-port 5000 --type ClusterIP

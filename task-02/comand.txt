@@ -1,0 +1,4 @@
+ kubectl run nginx1 --image nginx -l app=v1 -n s-35
+ kubectl run nginx2 --image nginx -l app=v1 -n s-35
+ kubectl -n s-35 label pod nginx2 app=v12 --overwrite
+ kubectl -n s-35 label pod nginx1 app=v11 --overwrite
