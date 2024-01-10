@@ -1,0 +1,24 @@
+namespace/s-35 created
+NAME              STATUS   AGE
+admin             Active   2d1h
+default           Active   20d
+ingress-nginx     Active   4d1h
+kube-node-lease   Active   4d1h
+kube-public       Active   20d
+kube-system       Active   20d
+s-23              Active   39h
+s-24              Active   39h
+s-27              Active   39h
+s-28              Active   39h
+s-29              Active   39h
+s-30              Active   39h
+s-34              Active   39h
+s-35              Active   50s
+s-36              Active   55m
+s-37              Active   39h
+s-38              Active   39h
+s-40              Active   39h
+s-44              Active   39h
+s-46              Active   39h
+s-49              Active   39h
+student-24        Active   45h

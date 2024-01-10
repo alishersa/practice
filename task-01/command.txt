@@ -1,0 +1,2 @@
+ kubectl create ns s-35
+ kubectl get ns
