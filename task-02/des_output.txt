@@ -1,0 +1,104 @@
+Name:             nginx1
+Namespace:        s-35
+Priority:         0
+Service Account:  default
+Node:             node1/135.181.204.192
+Start Time:       Wed, 10 Jan 2024 13:38:27 +0500
+Labels:           project=practice
+Annotations:      <none>
+Status:           Running
+IP:               10.233.69.216
+IPs:
+  IP:  10.233.69.216
+Containers:
+  nginx1:
+    Container ID:   containerd://2ef6a4abab7ad547ea27e6d1d67257d6cdb9ce08c6b8953342141471f201d1f6
+    Image:          nginx:latest
+    Image ID:       docker.io/library/nginx@sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 10 Jan 2024 13:38:29 +0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-4t9lh (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-4t9lh:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m52s  default-scheduler  Successfully assigned s-35/nginx1 to node1
+  Normal  Pulling    4m51s  kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     4m50s  kubelet            Successfully pulled image "nginx:latest" in 805ms (805ms including waiting)
+  Normal  Created    4m50s  kubelet            Created container nginx1
+  Normal  Started    4m50s  kubelet            Started container nginx1
+
+
+Name:             nginx2
+Namespace:        s-35
+Priority:         0
+Service Account:  default
+Node:             node2/95.217.7.185
+Start Time:       Wed, 10 Jan 2024 13:38:49 +0500
+Labels:           author=Alisher
+Annotations:      <none>
+Status:           Running
+IP:               10.233.66.200
+IPs:
+  IP:  10.233.66.200
+Containers:
+  nginx2:
+    Container ID:   containerd://d87f19cee665fd745d06c491d430ebd9a5f570b6c8684d3b440e3625598e87b3
+    Image:          nginx:latest
+    Image ID:       docker.io/library/nginx@sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 10 Jan 2024 13:38:51 +0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9l5mb (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-9l5mb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m31s  default-scheduler  Successfully assigned s-35/nginx2 to node2
+  Normal  Pulling    4m30s  kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     4m29s  kubelet            Successfully pulled image "nginx:latest" in 812ms (812ms including waiting)
+  Normal  Created    4m29s  kubelet            Created container nginx2
+  Normal  Started    4m29s  kubelet            Started container nginx2
