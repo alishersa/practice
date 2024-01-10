@@ -63,3 +63,4 @@
  1081  git branch -a
  1082  history |grep git  > task-13/command.txt
  1083  history |grep git  > task-13/command.txt
+ 1084  history |grep git  > task-13/git_command.txt
