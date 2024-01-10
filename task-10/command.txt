@@ -1,1 +1,2 @@
-kubectl port-forward --address 0.0.0.0 pod/flask-app-7fccd6948f-tq62b 8080:5000
+kubectl create deployment flask-app --image alishersa1233/python-flask-app:v1 --port 5000
+kubectl port-forward --address 0.0.0.0 pod/flask-app-785c77c986-4zpjt 8080:5000
