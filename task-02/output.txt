@@ -1,0 +1,2 @@
+pod/nginx1 created
+pod/nginx2 created
