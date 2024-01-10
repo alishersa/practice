@@ -1,2 +1,2 @@
-kubectl create deploy hr-app --image nginx:1.18 --replicas 2 -o yaml > deployment.yaml
+kubectl create deploy hr-app --image nginx:1.18 --replicas 2 --dry-run=client -o yaml > deployment.yaml
 kubectl apply -f deployment.yaml
