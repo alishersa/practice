@@ -1,1 +1,3 @@
-kubectl create deployment flask-app --image alishersa1233/flask-app:v1 --replicas 1 -n s-35
+docker build -t flask-app:v1 .
+docker tag flask-app:v1 alishersa1233/python-flask-app
+docker push flask-app:v1 alishersa1233/python-flask-app
