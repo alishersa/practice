@@ -645,3 +645,61 @@
   956  kubectl get deployment -o wide
   959  kubectl get deployment -o wide > output.txt
  1085  history |grep kubectl  > task-13/kub_command.txt
+ 1449  kubectl get deployment
+ 1450  kubectl get deployment -o wide
+ 1451  kubectl get deployment -o wide > output.txt
+ 1459  kubectl apply -f deployment.yaml 
+ 1460  kubectl get deployment -o wide
+ 1463  kubectl get deployment -o wide > output.txt
+ 1512  kubectl create deployment flask-app --address 0.0.0.0 --image alishersa1233/flask-app:v1 --replicas 1
+ 1513  kubectl create deployment flask-app address 0.0.0.0 --image alishersa1233/flask-app:v1 --replicas 1
+ 1514  kubectl create deployment flask-app --image alishersa1233/flask-app:v1 --replicas 1
+ 1516  kubectl get pods
+ 1517  kubectl port-forward --address 0.0.0.0 pod/flask-app-7fccd6948f-tq62b 8080:5000
+ 1518  echo "kubectl port-forward --address 0.0.0.0 pod/flask-app-7fccd6948f-tq62b 8080:5000" > command.txt
+ 1519  echo "kubectl create deployment flask-app --image alishersa1233/flask-app:v1 --replicas 1 -n s-35" > ../task-09/command.txt
+ 1522  kubectl get deploy
+ 1523  kubectl get deployment
+ 1524  kubectl expose deploy flask-app --port 8080 --target-port 5000 --type NodePort
+ 1525  kubectl get svc
+ 1526  kubectl get svc -o wide
+ 1528  kubectl get pod
+ 1532  echo "kubectl expose deploy flask-app --port 8080 --target-port 5000 --type NodePort" > task-11/command.txt
+ 1535  kubectl expose deploy busybox --port 80 --target-port 5000 --type ClusterIP --dry-run=client -o yaml > task-12/busybox.yaml
+ 1537* kubectl create deploy 
+ 1538  kubectl expose deploy busybox --port 80 --target-port 5000 --type ClusterIP --dry-run=client -o yaml > task-12/busybox.yaml
+ 1539  kubectl get pods
+ 1540  kubectl get deploy
+ 1541  echo "kubectl expose deploy flask-app --name flask-app-12 --port 8080 --target-port 5000 --type ClusterIP" > task-12/command.txt
+ 1542  kubectl expose deploy flask-app --name flask-app-12 --port 8080 --target-port 5000 --type ClusterIP
+ 1543  kubectl get svc
+ 1544  kubectl get svc > task-12/output.txt
+ 1547  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > task-13/flask.yaml
+ 1549  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > task-13/flask.yaml
+ 1551  kubectl apply -f flask.yaml 
+ 1552  kubectl get svc
+ 1556  kubectl apply -f flask.yaml 
+ 1557  kubectl get ingress
+ 1558  kubectl get ingress
+ 1560  kubectl apply -f flask.yaml 
+ 1561  kubectl edite flass-app
+ 1563  kubectl apply -f flask.yaml 
+ 1564  kubectl get ingress
+ 1566  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+ 1567  kubectl get svc
+ 1568  kubectl edite ingress flask.yaml 
+ 1570  kubectl apply -f flask.yaml 
+ 1571  kubectl get ingress
+ 1572  kubectl delete ingress
+ 1573  kubectl delete svc flask-app
+ 1574  kubectl get svc
+ 1575  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+ 1576  kubectl get svc
+ 1578  kubectl apply -f flask.yaml 
+ 1580  kubectl expose deploy flask-app --port 80 --target-port 5000 --type NodePort --name flask-app-svc
+ 1581  kubectl get svc
+ 1582  kubectl get nods -o wide
+ 1583  kubectl get nodes
+ 1584  kubectl get nodes -o wide
+ 1597  history | tail -150 | grep kube 
+ 1598  history | tail -150 | grep kube >> task-13/kub_command.txt 

@@ -1,3 +1,1 @@
-NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
-flask-app      NodePort    10.233.25.98   <none>        8080:30304/TCP   26m
-flask-app-12   ClusterIP   10.233.6.88    <none>        8080/TCP         56s
+service/flask-app-cluster exposed
