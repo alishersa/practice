@@ -1,0 +1,1000 @@
+   74  kubectl get nodes -o wide
+   75  kubectl get pods -o wide -n practice-student-35
+   76  kubectl get ns
+   77  kubectl get pods -o wide -n admin
+   78  vi .kube/config 
+   79  kubectl get pods
+   80  kubectl get pod
+   81  kubectl get pod -o wide
+   82  kubectl describe pods
+   83  kubectl get pods
+   84  kubectl detele pod todo-li
+   85  kubectl detele pod todo-list-app-95df4c7f7-nrxwg
+   86  kubectl delete pod todo-li
+   87  kubectl delete pod todo-list-app-95df4c7f7-nrxwg
+   88  kubectl get pods
+   89  kubectl delete deploy
+   90  history
+   91  history | grep kubectl detele
+   92  history | grep kubectl delete
+   93  history | grep kubectl dele
+   94  history | grep kubectl
+   95  history | grep kubectl delete
+   96  cat main.py
+   97  ls
+   98  cat README.md 
+   99  vi Dockerfile
+  100  docker build -it flask-app .
+  101  docker build -t flask-app .
+  102  vi Dockerfile
+  103  docker build -t flask-app .
+  104  vi Dockerfile
+  105  docker build -t flask-app:v1 .
+  106  vi Dockerfile
+  107  docker build -t flask-app:v1 .
+  108  vi Dockerfile
+  109  docker build -t flask-app:v1 .
+  110  ls
+  111  vi Dockerfile
+  112  docker build -t flask-app:v1 .
+  113  vi Dockerfile
+  114  docker build -t flask-app:v1 .
+  115  docker ps
+  116  crictl ps
+  117  crictl images ls
+  118  docker images
+  119  docker login
+  120  docker images
+  121  docker tag flask-app:v1 alishersa1233/python-flask-app
+  122  docker images
+  123  docker images
+  124  docker push flask-app:v1 alishersa1233/python-flask-app
+  125  docker image push flask-app:v1 alishersa1233/python-flask-app
+  126  docker image push alishersa1233/python-flask-app
+  127  cd -
+  128  ls
+  129  vi deployment.yaml 
+  130  vi deployment.yaml 
+  131  docker create deployment flask-app --image alishersa1233/python-flask-app --port 5000
+  132  ls
+  133  rm deployment.yaml 
+  134  mc
+  135  docker create deployment flask-app --image alishersa1233/python-flask-app --port 5000
+  136  ls
+  137  docker create deployment flask-app --image alishersa1233/python-flask-app --port 5000
+  138  docker create deployment flask-app --image alishersa1233/python-flask-app:latest --port 5000 -n practice-student-35 --dry-run=client -o yaml > deployment.yaml
+  139  docker create deploy flask-app --image ismoilbekmamajonov9595/python-flask-app:latest --port 5000 -n practice-student-35 --dry-run=client -o yaml > deployment.yaml
+  140  kubectl create deployment flask-app --image alishersa1233/python-flask-app:latest --port 5000 -n practice-student-35 --dry-run=client -o yaml > deployment.yaml
+  141  kubectl appy -f deployment.yaml 
+  142  kubectl apply -f deployment.yaml 
+  143  kubectl get pods
+  144  kubectl get pods -n practice-student-35
+  145  kubectl delete ns practice-student-35
+  146  kubectl get ns
+  147  kubectl create ns practice-student-35
+  148  kubectl get ns
+  149  kubectl run nginx1 --image nginx -l app=v1 -n  practice-student-35
+  150  kubectl run nginx2 --image nginx -l app=v2 -n  practice-student-35
+  151  kubectl get pods -n  practice-student-35 -o wide
+  152  kubectl desribe pods -n  practice-student-35
+  153  kubectl describe pods -n  practice-student-35
+  154  kubectl -n  practice-student-35 label pod nginx2 app=v21 --overwrite
+  155  kubectl describe pods -n  practice-student-35
+  156  kubectl -n  practice-student-35 label pod nginx2 app=v2 --overwrite
+  157  kubectl config get-context
+  158  kubectl config get-contexts
+  159  kubectl get pods -n  practice-student-35
+  160  kubectl get pods -n  practice-student-35 -o wide
+  161  history
+  162  kubectl config view
+  163  kubectl config view --kubeconfig= .kube/config 
+  164  kubectl config view --kubeconfig= /root/.kube/config 
+  165  pwd
+  166  ls -la
+  167  kubectl --kubeconfig= /root/.kube/config get pods
+  168  kubectl kubeconfig /root/.kube/config kubeconfig --kubeconfig
+  169  kubectl config set-context
+  170  kubectl config set-contexts
+  171  kubectl config set-context .kube/config 
+  172  kubectl config set-context
+  173  kubectl config get-context
+  174  kubectl config -h
+  175  kubectl config get-contexts
+  176  kubectl config set-context
+  177  kubectl config set-context
+  178  history
+  179  kubectl port-forward --address 0.0.0.0 alishersa1233/python-flask-app:latest  8080:5000 -n student-35
+  180  kubectl port-forward --address 0.0.0.0 alishersa1233/python-flask-app:latest  8080:5000 -n practice-student-35
+  181  kubectl port-forward --address 0.0.0.0 pod/nginx 8080:80 -n practice-student-35
+  182  kubectl port-forward --address 0.0.0.0 pod/todo-list-app-95df4c7f7-rzqrl 8080:3000 -n practice-student-35
+  183  kubectl get ns
+  184  kubectl port-forward --address 0.0.0.0 pod/todo-list-app 8080:3000 -n practice-student-35
+  185  kubectl get pods -n practice-student-ns
+  186  kubectl get pods -n practice-student-35
+  187  kubectl port-forward --address 0.0.0.0 nginx 8081:80 -n practice-student-35
+  188  kubectl port-forward --address 0.0.0.0 --image nginx 8081:80 -n practice-student-35
+  189  kubectl port-forward --address 0.0.0.0 pod/nginx1 8080-:80 -n practice-student-35
+  190  kubectl port-forward --address 0.0.0.0 pod/nginx1 8080:80 -n practice-student-35
+  191  kubectl get pod
+  192  kubectl get pod -n practice-student-35
+  193  kubectl port-forward --address 0.0.0.0 pod/nginx2 8080:80 -n practice-student-35
+  194  kubectl create --image nvrbckdown/todo-list-app
+  195  kubectl create --image nvrbckdown/todo-list-app -n practice-student-35
+  196  kubectl create  nvrbckdown/todo-list-app -n practice-student-35
+  197  kubectl create todo-list --image nvrbckdown/todo-list-app -n practice-student-35
+  198  history
+  199  kubectl run --image nvrbckdown/todo-list-app -n practice-student-35
+  200  kubectl run --image todo-list-app -n practice-student-35
+  201  kubectl run --image todo-list-app-95df4c7f7-rzqr -n practice-student-35
+  202  kubectl run --image todo-list-app -n practice-student-35
+  203  kubectl run  todo-list-app --image nvrbckdown/todo-list-app --port 3000  -n practice-student-35
+  204  kubectl port-forward --address 0.0.0.0 todo-list-app --image nvrbckdown/todo-list-app 8080:3000  -n practice-student-35
+  205  kubectl port-forward --address 0.0.0.0 pod/todo-list-app 8080:3000  -n practice-student-35
+  206  history | grep deplo
+  207  kubectl create deploy todo-list-app --image nvrbckdown/todo-list-app --port 3000 --replicas 1 -n student-35 --dry-run=client -o yaml > deployment.yaml
+  208  cat deployment.yaml 
+  209  kubectl get pods -n practice-student-35
+  210  kubectl delete pods todo-list-app -n practice-student-35
+  211  kubectl get pods -n practice-student-35
+  212  kubectl apply -f deployment.yaml 
+  213  vi deployment.yaml 
+  214  kubectl apply -f deployment.yaml
+  215  kubectl get pods -n practice-student-35
+  216  kubectl port-forward --address 0.0.0.0 pod/todo-list-app 8080:3000  -n practice-student-35
+  217  kubectl port-forward --address 0.0.0.0 pod/todo-list-app-95df4c7f7-nrxwg 8080:3000  -n practice-student-35
+  218  kubectl port-forward --address 0.0.0.0 pod/todo-list-app-95df4c7f7-nrxwg 8080:3000  -n practice-student-35
+  219  cat deployment.yaml 
+  220  kubectl get nods
+  221  kubectl get nodes
+  222  kubectl get nodes -o wide
+  223  kubectl get pods -o wide -n practice-student-35
+  224  kubectl get ns
+  225  kubectl get pods -o wide -n admin
+  226  vi .kube/config 
+  227  kubectl get pods
+  228  kubectl get pod
+  229  kubectl get pod -o wide
+  230  kubectl describe pods
+  231  kubectl get pods
+  232  kubectl detele pod todo-li
+  233  kubectl detele pod todo-list-app-95df4c7f7-nrxwg
+  234  kubectl delete pod todo-li
+  235  kubectl delete pod todo-list-app-95df4c7f7-nrxwg
+  236  kubectl get pods
+  237  kubectl delete deploy
+  238  history
+  239  history | grep kubectl detele
+  240  history | grep kubectl delete
+  241  history | grep kubectl dele
+  242  history | grep kubectl
+  243  history | grep kubectl delete
+  244  history | grep delete
+  245  kubectl delete deploy
+  246  kubectl delete deployment
+  247  kubectlget deployments
+  248  kubectl get deployments
+  249  kubectl delete deployment todo-list-app
+  250  kubectl delete deployments todo-list-app
+  251  kubectl get deployments
+  252  kubectl get pods
+  253  kubectl get nodes
+  254  kubectl get pods
+  255  kubectl get ns
+  256  vi deployment.yaml 
+  257  vi deployment.yaml 
+  258  kubectl get ns
+  259  history
+  260  kubectl create deploy nginx --image nginx --replicas 1 --dry-run=client -o yaml > nginx.yaml
+  261  kubectl get pod
+  262  kubectl apply -f nginx.yaml 
+  263  kubectl get pod
+  264  kubectl exppose deploy nginx --port 80 --target-port 80 --type clusterip --dry-run=client -0 yaml > nginx.yaml
+  265  kubectl expose deploy nginx --port 80 --target-port 80 --type clusterip --dry-run=client -0 yaml > nginx.yaml
+  266  kubectl expose deploy nginx --port 80 --target-port 80 --type clusterip --dry-run=client -o yaml > nginx.yaml
+  267  vi nginx.yaml 
+  268  kubectl expose deploy todo --port 80 --target-port 5000 --type ClusterIP --dry-run=client -o yaml > nginx1.yaml
+  269  vi nginx.yaml 
+  270  kubectl apply -f nginx.yaml 
+  271  kubectl cvs
+  272  kubectl svc
+  273  vi deployment.yaml 
+  274  kubectl apply -f deployment.yaml 
+  275  kubectl get pods
+  276  kubectl create deploy flask-app --image alishersa1233/flask-app:practice --replicas 1
+  277  kubectl get pods
+  278  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  279  kubectl svc
+  280  kubectl get svc
+  281  kubectl get pods
+  282  kubectl delete nginx-7854ff8877-p9n4h
+  283  kubectl get pods
+  284  kubectl delete pods nginx-7854ff8877-p9n4h
+  285  kubectl get pods
+  286  kubectl delete pods flask-app-84b74b9b8f-zn4f7
+  287  kubectl delete -f nginx
+  288  kubectl delete -f nginx.yaml
+  289  ls
+  290  kubectl get svc
+  291  kubectl delete -f deployment.yaml 
+  292  kubectl get svc
+  293  kubectl get pods
+  294  kubectl delete pods nginx-7854ff8877-m2hdj
+  295  kubectl get pods
+  296  kubectl delete -f deployment.yaml 
+  297  kubectl delete -f nginx1.yaml 
+  298  kubectl delete -f nginx.yaml 
+  299  kubectl delete -f nginx2.yaml 
+  300  kubectl delete svc
+  301  kubectl get svc
+  302  kubectl delete svc flask-app
+  303  kubectl get svc
+  304  kubectl get pods
+  305  kubectl delete deploy nginx-7854ff8877-t5rmj
+  306  kubectl delete -f deployment.yaml 
+  307  vi deployment.yaml 
+  308  kubectl get deploy
+  309  kubectl delete deploy nginx
+  310  kubectl get deploy
+  311  kubectl delete deploy flask-app
+  312  kubectl apply -f deployment.yaml 
+  313  kubectl get pods
+  314  kubectl get deploy
+  315  kubectl get deploy todo-list-app
+  316  kubectl expose deploy flask-app --port 80 --target-port 500 --type NodePort
+  317  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  318  kubectl get pods
+  319  kubectl expose deploy flask-app --port 80 --target-port 500 --type NodePort
+  320  kubectl get svc
+  321  kubectl create deploy flask-app --address 0.0.0.0 --image alishersa1233/python-flask-app --replicas 1
+  322  history | grep addre
+  323  kubectl port-forward --address 0.0.0.0 pod/flask-app-785c77c986-ppk2g 8080:5000  -n practice-student-35
+  324  kubectl get pods
+  325  kubectl get pod
+  326  kubectl get ns
+  327  kubectl create ns practice-student-35
+  328  kubectl get pod
+  329  kubectl get nods
+  330  kubectl get nod
+  331  kubectl get nodes
+  332  kubectl get nodes -o wide
+  333  kubectl get ns
+  334  kubectl get pods -n ingress-nginx
+  335  kubectl get pods -n ingress-nginx -o wide
+  336  kubectl get all -n ingress-nginx -o wide
+  337  kubectl gkubectl get ingressclasses.networking.k8s.io nginx -n ingress-nginx
+  338  kubectl kubectl get ingressclasses.networking.k8s.io nginx -n ingress-nginx
+  339  kubectl  get ingressclasses.networking.k8s.io nginx -n ingress-nginx
+  340  kubectl ns ingress-nginx
+  341  history
+  342  kubectl create deploy flask-app --address 0.0.0.0 --image alishersa1233/python-flask-app --replicas 1
+  343  kubectl create deployment flask-app --address 0.0.0.0 --image alishersa1233/python-flask-app --replicas 1
+  344  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  345  kubectl get deployment
+  346  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  347  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app -dry-run=client -o yaml
+  348  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app" -dry-run=client -o yaml
+  349  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app -dry-run=client -o yaml
+  350  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app:80" -dry-run=client -o yaml
+  351  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" -dry-run=client -o yaml
+  352  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml
+  353  kubectl
+  354  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > flask.yaml
+  355  vi flask.yaml 
+  356  vi flask.yaml 
+  357  kubectl aplly -f flask.yaml 
+  358  kubectl apply -f flask.yaml 
+  359  kubectl get ingress
+  360  curl b.bkm.uz
+  361  vi flask.yaml 
+  362  history
+  363  kubectl get ingress
+  364  kubectl pods
+  365  kubectl pod
+  366  kubectl ns
+  367  kubectl nods
+  368  kubectl nod
+  369  kubectl get nods
+  370  kubectl get nod
+  371  kubectl get ns
+  372  kubectl create ns practice-status-35
+  373  history
+  374  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  375  kubectl get ns
+  376  kubectl create ns practice-student-35
+  377  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  378  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  379  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app -dry-run=client -o yaml > flask.yaml
+  380  ;
+  381  exit
+  382  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app --dry-run=client -o yaml > flask.yaml
+  383  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > flask.yaml
+  384  kubectl get ingress
+  385  kubectl get ingress
+  386  kubectl get ingres
+  387  kubectl get deployment
+  388  kubectl get ingress flask-app
+  389  kubectl descripe ingress flask-app
+  390  kubectl describe ingress flask-app
+  391  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  392  kubectl describe deployment
+  393  history
+  394  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  395  kubectl describe svc
+  396  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml
+  397  kubectl describe Endpoints
+  398  kubectl describe endpoints.kubernetes.io
+  399  kubectl describe Endpoints
+  400  kubectl get svc
+  401  kubectl get ingress
+  402  kubectl get ingress flask-app
+  403  kubectl get ns
+  404  kubectl get pods
+  405  kubectl get pods -n ingress-nginx
+  406  kubectl get --all-pods -n ingress-nginx
+  407  kubectl get all pods -n ingress-nginx
+  408  kubectl get all -n ingress-nginx
+  409  kubectl get pods -o wide
+  410  kubectl get pods -o wide -n ingress-nginx
+  411  kubectl get svc
+  412  kubectl get ingresses.networking.k8s.io
+  413  kubectl get ingresses.networking.k8s.io flask-app
+  414  kubectl get ingresses.networking.k8s.io nginx
+  415  kubectl get ingressclasses.networking.k8s.io 
+  416  kubectl get ingressclasses.networking.k8s.io nginx
+  417  history
+  418  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" 
+  419  kubectl get ingress
+  420  kubectl get ingress
+  421  kubectl get ingress
+  422  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > flask.yaml
+  423  kubectl edit ingress flask.yaml 
+  424  kubectl edit ingress flask-app
+  425  kubectl get ingress
+  426  kubectl get ingress
+  427  kubectl get ingress
+  428  kubectl edit ingress flask-app
+  429  kubectl get pods -o wide
+  430  kubectl get svc
+  431  ls -la
+  432  kubectl get ns 
+  433  kubectl delete ns practice-status-35
+  434  kubectl delete ns practice-student-35
+  435  kubectl apply -f flask.yaml 
+  436  kubectl create ns practice-status-35
+  437  kubectl apply -f flask.yaml 
+  438  kubectl delete ns practice-status-35
+  439  kubectl create ns practice-student-35
+  440  kubectl apply -f flask.yaml 
+  441  kubectl get svc
+  442  kubectl get ingress
+  443  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  444  history
+  445  kubectl get ingress
+  446  kubectl get svc
+  447  kubectl get ingress
+  448  kubectl get ingress
+  449  kubectl get ingress
+  450  kubectl edit ingress flask-app
+  451  kubectl get ingress
+  452  vi flask.yaml 
+  453  kubectl edit ingress flask-app
+  454  kubectl get ingress
+  455  kubectl get ingress
+  456  kubectl edit ingress flask-app
+  457  kubectl get ingress
+  458  kubectl get ingress
+  459  kubectl get ingress
+  460  history
+  461  kubectl get ns
+  462  kubectl get ns
+  463  mkdir practice
+  464  cd practice/
+  465  mkdir task-01
+  466  cd task-01/
+  467  kubectl create ns s-35 > ns.txt
+  468  kubectl get ns
+  469  ls
+  470  cat ns.txt 
+  471  echo "kubectl create ns s-35" >> ns.txt
+  472  cat ns.txt 
+  473  cd -
+  474  mkdir task-02
+  475  cd task-02
+  476  kubectl get ns
+  477  history
+  478  history | grep run
+  479  echo " kubectl run nginx1 --image nginx -l app=v1 -n s-35" >> comand.txt
+  480  echo " kubectl run nginx2 --image nginx -l app=v1 -n s-35" >> comand.txt
+  481  kubectl get pods
+  482  kubectl get pods -n s-35
+  483  history | grep nginx2
+  484  echo " kubectl -n s-35 label pod nginx2 app=v12 --overwrite" >> comand.txt
+  485  echo " kubectl -n s-35 label pod nginx1 app=v11 --overwrite" >> comand.txt
+  486  cat comand.txt 
+  487  history | grep dry
+  488  kubectl pod nginx1 --dry-run=client -o yaml > nginx1.yaml
+  489  kubectl pods nginx1 --dry-run=client -o yaml > nginx1.yaml
+  490  history | grep run pod
+  491  cat main.py
+  492  ls
+  493  cat README.md 
+  494  vi Dockerfile
+  495  docker build -it flask-app .
+  496  docker build -t flask-app .
+  497  vi Dockerfile
+  498  docker build -t flask-app .
+  499  vi Dockerfile
+  500  docker build -t flask-app:v1 .
+  501  vi Dockerfile
+  502  docker build -t flask-app:v1 .
+  503  vi Dockerfile
+  504  docker build -t flask-app:v1 .
+  505  ls
+  506  vi Dockerfile
+  507  docker build -t flask-app:v1 .
+  508  vi Dockerfile
+  509  docker build -t flask-app:v1 .
+  510  docker ps
+  511  crictl ps
+  512  crictl images ls
+  513  docker images
+  514  docker login
+  515  docker images
+  516  docker tag flask-app:v1 alishersa1233/python-flask-app
+  517  docker images
+  518  docker images
+  519  docker push flask-app:v1 alishersa1233/python-flask-app
+  520  docker image push flask-app:v1 alishersa1233/python-flask-app
+  521  docker image push alishersa1233/python-flask-app
+  522  cd -
+  523  ls
+  524  vi deployment.yaml 
+  525  vi deployment.yaml 
+  526  docker create deployment flask-app --image alishersa1233/python-flask-app --port 5000
+  527  ls
+  528  rm deployment.yaml 
+  529  mc
+  530  docker create deployment flask-app --image alishersa1233/python-flask-app --port 5000
+  531  ls
+  532  docker create deployment flask-app --image alishersa1233/python-flask-app --port 5000
+  533  docker create deployment flask-app --image alishersa1233/python-flask-app:latest --port 5000 -n practice-student-35 --dry-run=client -o yaml > deployment.yaml
+  534  docker create deploy flask-app --image ismoilbekmamajonov9595/python-flask-app:latest --port 5000 -n practice-student-35 --dry-run=client -o yaml > deployment.yaml
+  535  kubectl create deployment flask-app --image alishersa1233/python-flask-app:latest --port 5000 -n practice-student-35 --dry-run=client -o yaml > deployment.yaml
+  536  kubectl appy -f deployment.yaml 
+  537  kubectl apply -f deployment.yaml 
+  538  kubectl get pods
+  539  kubectl get pods -n practice-student-35
+  540  kubectl delete ns practice-student-35
+  541  kubectl get ns
+  542  kubectl create ns practice-student-35
+  543  kubectl get ns
+  544  kubectl run nginx1 --image nginx -l app=v1 -n  practice-student-35
+  545  kubectl run nginx2 --image nginx -l app=v2 -n  practice-student-35
+  546  kubectl get pods -n  practice-student-35 -o wide
+  547  kubectl desribe pods -n  practice-student-35
+  548  kubectl describe pods -n  practice-student-35
+  549  kubectl -n  practice-student-35 label pod nginx2 app=v21 --overwrite
+  550  kubectl describe pods -n  practice-student-35
+  551  kubectl -n  practice-student-35 label pod nginx2 app=v2 --overwrite
+  552  kubectl config get-context
+  553  kubectl config get-contexts
+  554  kubectl get pods -n  practice-student-35
+  555  kubectl get pods -n  practice-student-35 -o wide
+  556  history
+  557  kubectl config view
+  558  kubectl config view --kubeconfig= .kube/config 
+  559  kubectl config view --kubeconfig= /root/.kube/config 
+  560  pwd
+  561  ls -la
+  562  kubectl --kubeconfig= /root/.kube/config get pods
+  563  kubectl kubeconfig /root/.kube/config kubeconfig --kubeconfig
+  564  kubectl config set-context
+  565  kubectl config set-contexts
+  566  kubectl config set-context .kube/config 
+  567  kubectl config set-context
+  568  kubectl config get-context
+  569  kubectl config -h
+  570  kubectl config get-contexts
+  571  kubectl config set-context
+  572  kubectl config set-context
+  573  history
+  574  kubectl port-forward --address 0.0.0.0 alishersa1233/python-flask-app:latest  8080:5000 -n student-35
+  575  kubectl port-forward --address 0.0.0.0 alishersa1233/python-flask-app:latest  8080:5000 -n practice-student-35
+  576  kubectl port-forward --address 0.0.0.0 pod/nginx 8080:80 -n practice-student-35
+  577  kubectl port-forward --address 0.0.0.0 pod/todo-list-app-95df4c7f7-rzqrl 8080:3000 -n practice-student-35
+  578  kubectl get ns
+  579  kubectl port-forward --address 0.0.0.0 pod/todo-list-app 8080:3000 -n practice-student-35
+  580  kubectl get pods -n practice-student-ns
+  581  kubectl get pods -n practice-student-35
+  582  kubectl port-forward --address 0.0.0.0 nginx 8081:80 -n practice-student-35
+  583  kubectl port-forward --address 0.0.0.0 --image nginx 8081:80 -n practice-student-35
+  584  kubectl port-forward --address 0.0.0.0 pod/nginx1 8080-:80 -n practice-student-35
+  585  kubectl port-forward --address 0.0.0.0 pod/nginx1 8080:80 -n practice-student-35
+  586  kubectl get pod
+  587  kubectl get pod -n practice-student-35
+  588  kubectl port-forward --address 0.0.0.0 pod/nginx2 8080:80 -n practice-student-35
+  589  kubectl create --image nvrbckdown/todo-list-app
+  590  kubectl create --image nvrbckdown/todo-list-app -n practice-student-35
+  591  kubectl create  nvrbckdown/todo-list-app -n practice-student-35
+  592  kubectl create todo-list --image nvrbckdown/todo-list-app -n practice-student-35
+  593  history
+  594  kubectl run --image nvrbckdown/todo-list-app -n practice-student-35
+  595  kubectl run --image todo-list-app -n practice-student-35
+  596  kubectl run --image todo-list-app-95df4c7f7-rzqr -n practice-student-35
+  597  kubectl run --image todo-list-app -n practice-student-35
+  598  kubectl run  todo-list-app --image nvrbckdown/todo-list-app --port 3000  -n practice-student-35
+  599  kubectl port-forward --address 0.0.0.0 todo-list-app --image nvrbckdown/todo-list-app 8080:3000  -n practice-student-35
+  600  kubectl port-forward --address 0.0.0.0 pod/todo-list-app 8080:3000  -n practice-student-35
+  601  history | grep deplo
+  602  kubectl create deploy todo-list-app --image nvrbckdown/todo-list-app --port 3000 --replicas 1 -n student-35 --dry-run=client -o yaml > deployment.yaml
+  603  cat deployment.yaml 
+  604  kubectl get pods -n practice-student-35
+  605  kubectl delete pods todo-list-app -n practice-student-35
+  606  kubectl get pods -n practice-student-35
+  607  kubectl apply -f deployment.yaml 
+  608  vi deployment.yaml 
+  609  kubectl apply -f deployment.yaml
+  610  kubectl get pods -n practice-student-35
+  611  kubectl port-forward --address 0.0.0.0 pod/todo-list-app 8080:3000  -n practice-student-35
+  612  kubectl port-forward --address 0.0.0.0 pod/todo-list-app-95df4c7f7-nrxwg 8080:3000  -n practice-student-35
+  613  kubectl port-forward --address 0.0.0.0 pod/todo-list-app-95df4c7f7-nrxwg 8080:3000  -n practice-student-35
+  614  cat deployment.yaml 
+  615  kubectl get nods
+  616  kubectl get nodes
+  617  kubectl get nodes -o wide
+  618  kubectl get pods -o wide -n practice-student-35
+  619  kubectl get ns
+  620  kubectl get pods -o wide -n admin
+  621  vi .kube/config 
+  622  kubectl get pods
+  623  kubectl get pod
+  624  kubectl get pod -o wide
+  625  kubectl describe pods
+  626  kubectl get pods
+  627  kubectl detele pod todo-li
+  628  kubectl detele pod todo-list-app-95df4c7f7-nrxwg
+  629  kubectl delete pod todo-li
+  630  kubectl delete pod todo-list-app-95df4c7f7-nrxwg
+  631  kubectl get pods
+  632  kubectl delete deploy
+  633  history
+  634  history | grep kubectl detele
+  635  history | grep kubectl delete
+  636  history | grep kubectl dele
+  637  history | grep kubectl
+  638  history | grep kubectl delete
+  639  history | grep delete
+  640  kubectl delete deploy
+  641  kubectl delete deployment
+  642  kubectlget deployments
+  643  kubectl get deployments
+  644  kubectl delete deployment todo-list-app
+  645  kubectl delete deployments todo-list-app
+  646  kubectl get deployments
+  647  kubectl get pods
+  648  kubectl get nodes
+  649  kubectl get pods
+  650  kubectl get ns
+  651  vi deployment.yaml 
+  652  vi deployment.yaml 
+  653  kubectl get ns
+  654  history
+  655  kubectl create deploy nginx --image nginx --replicas 1 --dry-run=client -o yaml > nginx.yaml
+  656  kubectl get pod
+  657  kubectl apply -f nginx.yaml 
+  658  kubectl get pod
+  659  kubectl exppose deploy nginx --port 80 --target-port 80 --type clusterip --dry-run=client -0 yaml > nginx.yaml
+  660  kubectl expose deploy nginx --port 80 --target-port 80 --type clusterip --dry-run=client -0 yaml > nginx.yaml
+  661  kubectl expose deploy nginx --port 80 --target-port 80 --type clusterip --dry-run=client -o yaml > nginx.yaml
+  662  vi nginx.yaml 
+  663  kubectl expose deploy todo --port 80 --target-port 5000 --type ClusterIP --dry-run=client -o yaml > nginx1.yaml
+  664  vi nginx.yaml 
+  665  kubectl apply -f nginx.yaml 
+  666  kubectl cvs
+  667  kubectl svc
+  668  vi deployment.yaml 
+  669  kubectl apply -f deployment.yaml 
+  670  kubectl get pods
+  671  kubectl create deploy flask-app --image alishersa1233/flask-app:practice --replicas 1
+  672  kubectl get pods
+  673  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  674  kubectl svc
+  675  kubectl get svc
+  676  kubectl get pods
+  677  kubectl delete nginx-7854ff8877-p9n4h
+  678  kubectl get pods
+  679  kubectl delete pods nginx-7854ff8877-p9n4h
+  680  kubectl get pods
+  681  kubectl delete pods flask-app-84b74b9b8f-zn4f7
+  682  kubectl delete -f nginx
+  683  kubectl delete -f nginx.yaml
+  684  ls
+  685  kubectl get svc
+  686  kubectl delete -f deployment.yaml 
+  687  kubectl get svc
+  688  kubectl get pods
+  689  kubectl delete pods nginx-7854ff8877-m2hdj
+  690  kubectl get pods
+  691  kubectl delete -f deployment.yaml 
+  692  kubectl delete -f nginx1.yaml 
+  693  kubectl delete -f nginx.yaml 
+  694  kubectl delete -f nginx2.yaml 
+  695  kubectl delete svc
+  696  kubectl get svc
+  697  kubectl delete svc flask-app
+  698  kubectl get svc
+  699  kubectl get pods
+  700  kubectl delete deploy nginx-7854ff8877-t5rmj
+  701  kubectl delete -f deployment.yaml 
+  702  vi deployment.yaml 
+  703  kubectl get deploy
+  704  kubectl delete deploy nginx
+  705  kubectl get deploy
+  706  kubectl delete deploy flask-app
+  707  kubectl apply -f deployment.yaml 
+  708  kubectl get pods
+  709  kubectl get deploy
+  710  kubectl get deploy todo-list-app
+  711  kubectl expose deploy flask-app --port 80 --target-port 500 --type NodePort
+  712  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  713  kubectl get pods
+  714  kubectl expose deploy flask-app --port 80 --target-port 500 --type NodePort
+  715  kubectl get svc
+  716  kubectl create deploy flask-app --address 0.0.0.0 --image alishersa1233/python-flask-app --replicas 1
+  717  history | grep addre
+  718  kubectl port-forward --address 0.0.0.0 pod/flask-app-785c77c986-ppk2g 8080:5000  -n practice-student-35
+  719  kubectl get pods
+  720  kubectl get pod
+  721  kubectl get ns
+  722  kubectl create ns practice-student-35
+  723  kubectl get pod
+  724  kubectl get nods
+  725  kubectl get nod
+  726  kubectl get nodes
+  727  kubectl get nodes -o wide
+  728  kubectl get ns
+  729  kubectl get pods -n ingress-nginx
+  730  kubectl get pods -n ingress-nginx -o wide
+  731  kubectl get all -n ingress-nginx -o wide
+  732  kubectl gkubectl get ingressclasses.networking.k8s.io nginx -n ingress-nginx
+  733  kubectl kubectl get ingressclasses.networking.k8s.io nginx -n ingress-nginx
+  734  kubectl  get ingressclasses.networking.k8s.io nginx -n ingress-nginx
+  735  kubectl ns ingress-nginx
+  736  history
+  737  kubectl create deploy flask-app --address 0.0.0.0 --image alishersa1233/python-flask-app --replicas 1
+  738  kubectl create deployment flask-app --address 0.0.0.0 --image alishersa1233/python-flask-app --replicas 1
+  739  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  740  kubectl get deployment
+  741  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  742  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app -dry-run=client -o yaml
+  743  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app" -dry-run=client -o yaml
+  744  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app -dry-run=client -o yaml
+  745  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app:80" -dry-run=client -o yaml
+  746  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" -dry-run=client -o yaml
+  747  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml
+  748  kubectl
+  749  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > flask.yaml
+  750  vi flask.yaml 
+  751  vi flask.yaml 
+  752  kubectl aplly -f flask.yaml 
+  753  kubectl apply -f flask.yaml 
+  754  kubectl get ingress
+  755  curl b.bkm.uz
+  756  vi flask.yaml 
+  757  history
+  758  kubectl get ingress
+  759  kubectl pods
+  760  kubectl pod
+  761  kubectl ns
+  762  kubectl nods
+  763  kubectl nod
+  764  kubectl get nods
+  765  kubectl get nod
+  766  kubectl get ns
+  767  kubectl create ns practice-status-35
+  768  history
+  769  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  770  kubectl get ns
+  771  kubectl create ns practice-student-35
+  772  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  773  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  774  kubectl create ingress flask-app -rule "b.bkm.uz/=flask-app -dry-run=client -o yaml > flask.yaml
+  775  ;
+  776  exit
+  777  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app --dry-run=client -o yaml > flask.yaml
+  778  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > flask.yaml
+  779  kubectl get ingress
+  780  kubectl get ingress
+  781  kubectl get ingres
+  782  kubectl get deployment
+  783  kubectl get ingress flask-app
+  784  kubectl descripe ingress flask-app
+  785  kubectl describe ingress flask-app
+  786  kubectl create deploy flask-app --image alishersa1233/python-flask-app --replicas 1
+  787  kubectl describe deployment
+  788  history
+  789  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  790  kubectl describe svc
+  791  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml
+  792  kubectl describe Endpoints
+  793  kubectl describe endpoints.kubernetes.io
+  794  kubectl describe Endpoints
+  795  kubectl get svc
+  796  kubectl get ingress
+  797  kubectl get ingress flask-app
+  798  kubectl get ns
+  799  kubectl get pods
+  800  kubectl get pods -n ingress-nginx
+  801  kubectl get --all-pods -n ingress-nginx
+  802  kubectl get all pods -n ingress-nginx
+  803  kubectl get all -n ingress-nginx
+  804  kubectl get pods -o wide
+  805  kubectl get pods -o wide -n ingress-nginx
+  806  kubectl get svc
+  807  kubectl get ingresses.networking.k8s.io
+  808  kubectl get ingresses.networking.k8s.io flask-app
+  809  kubectl get ingresses.networking.k8s.io nginx
+  810  kubectl get ingressclasses.networking.k8s.io 
+  811  kubectl get ingressclasses.networking.k8s.io nginx
+  812  history
+  813  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" 
+  814  kubectl get ingress
+  815  kubectl get ingress
+  816  kubectl get ingress
+  817  kubectl create ingress flask-app --rule "b.bkm.uz/=flask-app:80" --dry-run=client -o yaml > flask.yaml
+  818  kubectl edit ingress flask.yaml 
+  819  kubectl edit ingress flask-app
+  820  kubectl get ingress
+  821  kubectl get ingress
+  822  kubectl get ingress
+  823  kubectl edit ingress flask-app
+  824  kubectl get pods -o wide
+  825  kubectl get svc
+  826  ls -la
+  827  kubectl get ns 
+  828  kubectl delete ns practice-status-35
+  829  kubectl delete ns practice-student-35
+  830  kubectl apply -f flask.yaml 
+  831  kubectl create ns practice-status-35
+  832  kubectl apply -f flask.yaml 
+  833  kubectl delete ns practice-status-35
+  834  kubectl create ns practice-student-35
+  835  kubectl apply -f flask.yaml 
+  836  kubectl get svc
+  837  kubectl get ingress
+  838  kubectl expose deploy flask-app --port 80 --target-port 5000 --type ClusterIP
+  839  history
+  840  kubectl get ingress
+  841  kubectl get svc
+  842  kubectl get ingress
+  843  kubectl get ingress
+  844  kubectl get ingress
+  845  kubectl edit ingress flask-app
+  846  kubectl get ingress
+  847  vi flask.yaml 
+  848  kubectl edit ingress flask-app
+  849  kubectl get ingress
+  850  kubectl get ingress
+  851  kubectl edit ingress flask-app
+  852  kubectl get ingress
+  853  kubectl get ingress
+  854  kubectl get ingress
+  855  history
+  856  kubectl get ns
+  857  kubectl get ns
+  858  mkdir practice
+  859  cd practice/
+  860  mkdir task-01
+  861  cd task-01/
+  862  kubectl create ns s-35 > ns.txt
+  863  kubectl get ns
+  864  ls
+  865  cat ns.txt 
+  866  echo "kubectl create ns s-35" >> ns.txt
+  867  cat ns.txt 
+  868  cd -
+  869  mkdir task-02
+  870  cd task-02
+  871  kubectl get ns
+  872  history
+  873  history | grep run
+  874  echo " kubectl run nginx1 --image nginx -l app=v1 -n s-35" >> comand.txt
+  875  echo " kubectl run nginx2 --image nginx -l app=v1 -n s-35" >> comand.txt
+  876  kubectl get pods
+  877  kubectl get pods -n s-35
+  878  history | grep nginx2
+  879  echo " kubectl -n s-35 label pod nginx2 app=v12 --overwrite" >> comand.txt
+  880  echo " kubectl -n s-35 label pod nginx1 app=v11 --overwrite" >> comand.txt
+  881  cat comand.txt 
+  882  history | grep dry
+  883  kubectl pod nginx1 --dry-run=client -o yaml > nginx1.yaml
+  884  kubectl pods nginx1 --dry-run=client -o yaml > nginx1.yaml
+  885  history | grep run pod
+  886  history | grep run 
+  887  kubectl run nginx1 --image nginx -l app=v1 -n s-35 --dry-run=client > nginx1.yaml
+  888  kkubectl edit pod nginx1
+  889  kubectl edit pod nginx1
+  890  kubectl edit pods nginx1
+  891  kubectl edit pods nginx2
+  892  vi nginx1.yaml 
+  893  mc
+  894  kubectl edit pods nginx1
+  895  kubectl run nginx1 --image nginx -l app=v1 -n s-35 --dry-run=client -o yaml > nginx1.yaml
+  896  vi nginx1.yaml 
+  897  vi nginx1.yaml 
+  898  kubectl run nginx2 --image nginx -l app=v1 -n s-35 --dry-run=client -o yaml > nginx2.yaml
+  899  cd -
+  900  mkdir task-03
+  901  cd task-03
+  902  history | grep busybox
+  903  history | grep busy
+  904  history
+  905  history | grep run
+  906  kubectl run nginx1 --image nginx -l project=practice -n s-35 --dry-run=client -o yaml > nginx2.yaml
+  907  kubectl describe pod nginx1
+  908  kubectl delete pod nginx1
+  909  kubectl run nginx1 --image nginx -l project=practice -n s-35 --dry-run=client -o yaml > nginx1yaml
+  910  kubectl describe pod nginx1
+  911  kubectl get pods
+  912  kubectl describe pod nginx2
+  913  kubectl delete pod nginx2
+  914  history
+  915  kubectl run nginx1 --image nginx -l project=practice -n s-35 --dry-run=client -o yaml > nginx1.yaml
+  916  kubectl get pods
+  917  kubectl apply -f nginx1.yaml 
+  918  kubectl get pods
+  919  kubectl run nginx2 --image nginx -l author=Saidov -n s-35 --dry-run=client -o yaml > nginx2.yaml
+  920  kubectl apply -f nginx2.yaml 
+  921  kubectl get --all-pods
+  922  kubectl describe --all-pod
+  923  kubectl describe --all-pods
+  924  kubectl run busybox --image busybox -n s-35 --command sleep 3600 --dry-run=client -o yaml > busybox.yaml
+  925  kukbectl get pods
+  926  kukbectl get pod
+  927  kubectl get pods
+  928  kubectl apply -f busybox.yaml 
+  929  kubectl get pods
+  930  cd..
+  931  cd ..
+  932  mkdir task-04
+  933  cd task-04
+  934  kubectl get pod -l project=practice 
+  935  kubectl get pod -l project=practice -n s-35 > output.txt
+  936  cat output.txt 
+  937  history | grep hr-app
+  938  cd ..
+  939  mkdir task-05
+  940  cd task-05
+  941  history | grep deploy
+  942  history | grep deploy
+  943  kubectl create deploy hr-app --image nginx:1.18 --replicas 2 --dry-run=client -o yaml > deployment.yaml
+  944  kubectl apply -f deployment.yaml 
+  945  kubectl get deployment
+  946  kubectl get deployment -o wide
+  947  kubectl get deployment -o wide > output.txt
+  948  cd ..
+  949  mkdir task-06
+  950  cd task-06
+  951  cd-
+  952  cd -
+  953  cd task-05
+  954  vi deployment.yaml 
+  955  kubectl apply -f deployment.yaml 
+  956  kubectl get deployment -o wide
+  957  cd ..
+  958  cd task-06
+  959  kubectl get deployment -o wide > output.txt
+  960  cat output.txt 
+  961  cd ..
+  962  mkdir task-07
+  963  cd task-07
+  964  git clone https://github.com/nvrbcdown/flask-app.git
+  965  git clone https://github.com/nvrbckdown/flask-app.git
+  966  ls
+  967  cd flask-app/
+  968  ls
+  969  vi Dockerfile 
+  970  cat main.py 
+  971  vi Dockerfile 
+  972  cd -
+  973  cd ..
+  974  mkdir task-08
+  975  cp task-07/flask-app/* task-08/
+  976  cp -r task-07/flask-app/* task-08/
+  977  cd task-08
+  978  ls
+  979  vi Dockerfile 
+  980  vi Dockerfile 
+  981  cd ..
+  982  mkdir task-09
+  983  cp -r task-08/* task-09/
+  984  cd task-09
+  985  ls
+  986  history | grep build
+  987  docker build -t flask-app:v1
+  988  docker build -t flask-app:v1 .
+  989  docker ps
+  990  docker images
+  991  history
+  992  git login
+  993  git login
+  994  docker login
+  995  history | grep docker push
+  996  ls
+  997  cd practice/task-10
+  998  curl 10.200.203.20:8080
+  999  curl 10.200.203.20:8080 > output.txt
+ 1000  cat output.txt 
+ 1001  git add .
+ 1002  git commit -m "dd"
+ 1003  git push origin
+ 1004  cat /root/.ssh/id_rsa.pub 
+ 1005  git push origin
+ 1006  git status
+ 1007  curl 10.200.203.20:8080
+ 1008  git brach
+ 1009  git branch
+ 1010  git remote -v
+ 1011  git remote add alisher git@github.com:alishersa/practice.git
+ 1012  git remote -v
+ 1013  git status
+ 1014  git status
+ 1015  touch task-10/out.txt
+ 1016  git status
+ 1017  git add .
+ 1018  git commit -m "d"
+ 1019  git push alisher
+ 1020  git branch
+ 1021  git checkout main
+ 1022  git branch
+ 1023  git push alisher
+ 1024  git pull
+ 1025  git pull alisher
+ 1026  git status
+ 1027  git push alisher
+ 1028  git commit -m ""
+ 1029  git -v
+ 1030  git --version
+ 1031  git push alisher
+ 1032  yum install git -y
+ 1033  cd ..
+ 1034  wget https://github.com/git/git/archive/v2.13.0.tar.gz -O git.tar.gz
+ 1035  tar -zxf git.tar.gz
+ 1036  cd git-2.13.0
+ 1037  make configure
+ 1038  ./configure --prefix=/usr/local
+ 1039  make install
+ 1040  git --version
+ 1041  yum remove git
+ 1042  make install
+ 1043  make configure
+ 1044  ls
+ 1045  cd ..
+ 1046  ls
+ 1047  tar -zxf git.tar.gz
+ 1048  cd git-2.13.0
+ 1049  make configure
+ 1050  ./configure --prefix=/usr/local
+ 1051  sudo make install
+ 1052  git --version
+ 1053  yum install git -y
+ 1054  yum update
+ 1055  cd ..
+ 1056  cd practice/
+ 1057  git log
+ 1058  git commit -m ""
+ 1059  git branch
+ 1060  git push alisher
+ 1061  git config --global push.default matching
+ 1062  git push alisher
+ 1063  git config --global push.default simple
+ 1064  git push alisher
+ 1065  git push alisher
+ 1066  git push --help
+ 1067  git fesh
+ 1068  git pul alisher main
+ 1069  git pull alisher main
+ 1070  ls
+ 1071  git push alisher main
+ 1072  history
+ 1073  history > task-13/command.txt
